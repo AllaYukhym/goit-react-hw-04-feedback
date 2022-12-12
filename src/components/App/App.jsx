@@ -12,15 +12,15 @@ export function App() {
   const [bad, setBad] = useState(0);
 
   const handleOnClickGood = () => {
-    setGood(good + 1);
+    setGood(prevState => prevState + 1);
   };
 
   const handleOnClickNeutral = () => {
-    setNeutral(neutral + 1);
+    setNeutral(prevState => prevState + 1);
   };
 
   const handleOnClickBad = () => {
-    setBad(bad + 1);
+    setBad(prevState => prevState + 1);
   };
 
   const countTotalFeedback = (good, neutral, bad) => {
